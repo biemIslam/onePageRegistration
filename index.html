@@ -9,16 +9,16 @@
 		<p id="success-message"> </p>
 		<h1>Student Registration Form</h1>
 		<div>
-			<div>
-				<label for="firstname"> First Name* </label>
+			<div  id="firstname-div">
+				<label for="firstname"> First Name <span class="asterik"> * </span> </label>
 				<input type="firstname" name="" required="required" class="inputs" id="firstname"> 
 			</div>
-			<div>
-				<label for="lastname"> Last Name* </label>			
+			<div id="lastname-div">
+				<label for="lastname"> Last Name <span class="asterik"> * </span> </label>			
 				<input type="lastname" name="" id="lastname" required="required" class="inputs"> 
 			</div> 
 			<div id="email">
-				<label for="email" id="email-label"> Email* </label> 
+				<label for="email" id="email-label"> Email <span class="asterik"> * </span> </label> 
 				<input type="email" name="" required="required" id="input-email" class="inputs"> 
 			</div>
 			<div id="gender">
@@ -29,7 +29,7 @@
 				</span>
 			</div>
 			<div id="courses">
-				<label for="choose"> Choose courses*</label>
+				<label for="choose"> Choose courses <span class="asterik"> * </span> </label>
 				<select id="select-courses">
 					<option value=""> --Select-- </option>
 					<option value="Mat206"> Calculus </option>
@@ -41,8 +41,8 @@
 			</div>
 
 			<span id="buttons">
-				<input type="submit" name="" value="Reset"> 
-				<input type="submit" name="" value="Register" onclick="confirmReg()"> 
+				<input type="button" name="" value="Reset" onclick="this.form.reset()"> 
+				<input type="button" name="" value="Register" onclick="confirmReg()"> 
 			</span>
 		</div>		
 	</form>
@@ -54,12 +54,12 @@
 			var courses = document.getElementById('select-courses').value;
 
 			if (firstname == "" || lastname == "" || email == "" || courses == "") {
-				// document.getElementById('display_message').innerHTML = "Please enter your user name or password";
-				alert("Please enter your user name or password");
+				document.getElementById('success-message').innerHTML = "<span style='color: red;'>" +"Please enter your user name or password" + "</span>";
+				// alert("Please enter your user name or password");
 			}
 			else{
-				// document.getElementById('display_message').innerHTML = "You have successfully logged in";
-				alert("You have successfully logged in");
+				document.getElementById('success-message').innerHTML = "You have successfully logged in";
+				// alert("You have successfully logged in");
 			}
 		}
 	</script>

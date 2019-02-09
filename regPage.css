@@ -1,9 +1,12 @@
 
 body{
-	background-image: linear-gradient(to right, rgba(105,105,105,0.3), rgba(96,96,96,1));
+	background: url('ocean.jpg') no-repeat;
+	background-size: cover;
+	color: white;
+	/*background-image: linear-gradient(to right, rgba(105,105,105,0.3), rgba(96,96,96,1));*/
 }
 form{
-	background: #eee;
+	background: #4682B4;
 	border-style: none;
 	/*border: 2px solid red;*/
 	width: 50%;
@@ -16,6 +19,9 @@ form{
 }
 form div{
 	padding: 15px;
+}
+.asterik{
+	color: red;
 }
 .inputs{
 	margin-left: 80px;
@@ -30,7 +36,7 @@ div #email{
 }
 #gender-label{
 	/*border: 1px solid red;*/
-	margin-right: 30px;
+	margin-right: 80px;
 }
 div span{
 	margin-right: 40px;
